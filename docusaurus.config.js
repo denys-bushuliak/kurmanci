@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Курманджи',
   tagline: 'Грамматика языка с примерами',
-  url: 'https://kurmanji.online',
-  baseUrl: '/',
+  url: 'https://denys-bushuliak.github.io',
+  baseUrl: '/kurmanci/',
   onBrokenLinks: 'throw',
   markdown: {
     hooks: {
