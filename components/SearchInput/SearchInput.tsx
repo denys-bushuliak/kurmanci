@@ -1,18 +1,18 @@
 import React, { ChangeEvent } from 'react';
 import { useRequest } from 'ahooks';
+import Link from '@docusaurus/Link';
 import data from '../../docs/result.json';
 import './style.css';
 
 async function getResults(search: string): Promise<typeof data> {
-  const pattern = new RegExp(search, 'gi');
+  const query = search.toLowerCase().trim();
 
   return new Promise((resolve) => {
-    const results = data.filter((page) => pattern.test(page.body));
-    if (results) {
-      resolve(results);
-    } else {
-      resolve([]);
-    }
+    const results = data.filter((page) => 
+      page.body.toLowerCase().includes(query) ||
+      page.title.toLowerCase().includes(query)
+    );
+    resolve(results || []);
   });
 }
 
@@ -36,15 +36,15 @@ export function SearchInput() {
       />
       <dl>
         {data?.length > 0 &&
-          data?.map((v) => {
+          data?.map((v, idx) => {
             return (
-              <>
+              <React.Fragment key={idx}>
                 <dt>
-                  <a target="_blank" className="result" href={v.url}>
+                  <Link className="result" to={v.url}>
                     {v.title}
-                  </a>
+                  </Link>
                 </dt>
-              </>
+              </React.Fragment>
             );
           })}
         {data && data?.length == 0 && 'Нет результатов'}

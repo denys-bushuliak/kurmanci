@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "yarn generate:search && docusaurus start",
+    "build": "yarn generate:search && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "generate:search": "node -r ts-node/register index.ts docs/result.json"
+    "generate:search": "node index.js docs/result.json"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.1",
