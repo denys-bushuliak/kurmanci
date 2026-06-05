@@ -4,27 +4,16 @@ module.exports = {
   url: 'https://kurmanji.online',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'kurmaci', // Usually your repo name.
+  trailingSlash: false,
   themeConfig: {
-    siteMap: {
-      cacheTime: 600 * 1000, // 600 sec - cache purge period
-      changefreq: 'weekly',
-      priority: 0.5,
-      trailingSlash: false,
-    },
-    googleAnalytics: {
-      trackingID: 'G-6X6GBBP4NE',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-    },
-    gtag: {
-      trackingID: 'G-6X6GBBP4NE',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-    },
     navbar: {
       title: 'Язык курманджи',
       logo: {
@@ -78,6 +67,14 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-6X6GBBP4NE',
+          anonymizeIP: true,
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
         },
       },
     ],
