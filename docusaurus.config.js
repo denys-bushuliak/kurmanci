@@ -10,8 +10,8 @@ module.exports = {
     },
   },
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'kurmaci', // Usually your repo name.
+  organizationName: 'denys-bushuliak', // Usually your GitHub org/user name.
+  projectName: 'kurmanci', // Usually your repo name.
   trailingSlash: false,
   themeConfig: {
     navbar: {
