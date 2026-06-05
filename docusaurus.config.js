@@ -1,54 +1,54 @@
 module.exports = {
-  title: 'Курманджи',
-  tagline: 'Грамматика языка с примерами',
-  url: 'https://denys-bushuliak.github.io',
-  baseUrl: '/kurmanci/',
-  onBrokenLinks: 'throw',
+  title: "Курманджи",
+  tagline: "Грамматика языка с примерами",
+  url: "https://denys-bushuliak.github.io",
+  baseUrl: "/kurmanci/",
+  onBrokenLinks: "throw",
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownLinks: "warn",
     },
   },
-  favicon: 'img/favicon.ico',
-  organizationName: 'denys-bushuliak', // Usually your GitHub org/user name.
-  projectName: 'kurmanci', // Usually your repo name.
+  favicon: "img/favicon.ico",
+  organizationName: "denys-bushuliak", // Usually your GitHub org/user name.
+  projectName: "kurmanci", // Usually your repo name.
   trailingSlash: false,
   themeConfig: {
     navbar: {
-      title: 'Язык курманджи',
+      title: "Язык курманджи",
       logo: {
-        alt: 'Язык курманджи',
-        src: 'img/logo.svg',
+        alt: "Язык курманджи",
+        src: "img/logo.svg",
       },
       items: [
         {
-          to: 'docs/chapter-1/pronouns',
-          activeBasePath: 'docs',
-          label: 'Грамматика',
-          position: 'left',
+          to: "docs/chapter-1/pronouns",
+          activeBasePath: "docs",
+          label: "Грамматика",
+          position: "left",
         },
         {
-          to: 'docs/search',
-          activeBasePath: 'pages',
-          label: 'Поиск',
-          position: 'right',
+          to: "docs/search",
+          activeBasePath: "pages",
+          label: "Поиск",
+          position: "right",
         },
         {
-          href: 'https://denys-bushulyak.github.io/kurmanci',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/denys-bushuliak/kurmanci",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Больше',
+          title: "Больше",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://denys-bushulyak.github.io/kurmanci',
+              label: "GitHub",
+              href: "https://github.com/denys-bushuliak/kurmanci",
             },
           ],
         },
@@ -58,22 +58,22 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/Denys-Bushulyak/kurmanci/blob/master',
+          editUrl: "https://github.com/Denys-Bushulyak/kurmanci/blob/master",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-6X6GBBP4NE',
+          trackingID: "G-6X6GBBP4NE",
           anonymizeIP: true,
         },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: "weekly",
           priority: 0.5,
         },
       },
